@@ -9,7 +9,7 @@ import logoLight from '../assets/dark_logo.png';
 	<a href="/">
 		<picture>
 			<source srcset={logoDark.src} media="(prefers-color-scheme: dark)" />
-			<img src={logoLight.src} alt="Descriptive alt text" width={300} />
+			<img src={logoLight.src} alt="Descriptive alt text" width={300}id="logo" />
 		</picture>
 	</a>
 	<nav>
@@ -24,4 +24,15 @@ import logoLight from '../assets/dark_logo.png';
 
 
 <style>
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem;
+		flex-wrap: wrap;
+		position: relative;
+		background: var(--background-color);
+		color: var(--text-color);
+	}
+
 </style>
