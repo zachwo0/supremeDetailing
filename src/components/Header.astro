@@ -1,7 +1,7 @@
 ---
 import logoDark from '../assets/logo_transparent.png';
 import logoLight from '../assets/dark_logo.png';
-
+import Navigation from './Navigation.astro';
 
 ---
 
@@ -12,27 +12,12 @@ import logoLight from '../assets/dark_logo.png';
 			<img src={logoLight.src} alt="Descriptive alt text" width={300}id="logo" />
 		</picture>
 	</a>
-	<nav>
-		<ul>
-			<li><a href="#services">Services</a></li>
-			<li><a href="#about">About Us</a></li>
-			<li><a href="#gallery">Gallery</a></li>
-			<li><a href="#contact">Contact Us</a></li>
-		</ul>
-	</nav>
+	<Navigation />
+
 </header>
 
 
 <style>
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1rem;
-		flex-wrap: wrap;
-		position: relative;
-		background: var(--background-color);
-		color: var(--text-color);
-	}
+
 
 </style>
