@@ -1,11 +1,27 @@
 ---
-import logo from '../assets/logo_transparent.png';
-import darkLogo from '../assets/dark_logo.png';
+import logoDark from '../assets/logo_transparent.png';
+import logoLight from '../assets/dark_logo.png';
+
 
 ---
 
 <header>
-	<a>
-		<img src={darkLogo.src} alt="logo" />
+	<a href="/">
+		<picture>
+			<source srcset={logoDark.src} media="(prefers-color-scheme: dark)" />
+			<img src={logoLight.src} alt="Descriptive alt text" width={300} />
+		</picture>
 	</a>
+	<nav>
+		<ul>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#about">About Us</a></li>
+			<li><a href="#gallery">Gallery</a></li>
+			<li><a href="#contact">Contact Us</a></li>
+		</ul>
+	</nav>
 </header>
+
+
+<style>
+</style>
