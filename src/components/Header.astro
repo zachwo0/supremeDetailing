@@ -9,15 +9,37 @@ import Navigation from './Navigation.astro';
 	<a href="/">
 		<picture>
 			<source srcset={logoDark.src} media="(prefers-color-scheme: dark)" />
-			<img src={logoLight.src} alt="Descriptive alt text" width={300}id="logo" />
+			<img src={logoLight.src} alt="Descriptive alt text" width={240}id="logo" />
 		</picture>
 	</a>
 	<Navigation />
 
 </header>
 
-
 <style>
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem;
+		background: var(--background-color);
+		color: var(--text-color);
+		gap: 1rem;
+		text-align: center;
+	}
 
+	#logo {
+		max-width: 240px;
+		height: auto;
+	}
 
+	@media (min-width: 768px) {
+		header {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			text-align: left;
+		}
+	}
 </style>
+
