@@ -31,6 +31,7 @@ import Navigation from './Navigation.astro';
 	#logo {
 		max-width: 240px;
 		height: auto;
+		animation: fadeInLogo 0.8s ease-in-out;
 	}
 
 	@media (min-width: 768px) {
@@ -40,6 +41,18 @@ import Navigation from './Navigation.astro';
 			align-items: center;
 			text-align: left;
 		}
+	}
+
+
+	@keyframes fadeInLogo {
+		from {
+		transform: scale(0.9);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
 	}
 </style>
 
