@@ -3,11 +3,14 @@
 ---
 
 <section id="hero">
-	<div class="hero-content">
-		<p>Experience ultimate shine with professional detailing and pressure washing services. Supreme Detailing brings your property to life and ensures they look their best.</p>
-		<div class="hero-buttons">
-			<a href="#services" class="btn primary">View offered Services</a>
-			<a href="#contact" class="btn secondary">Book Now</a>
+	<div class="overlay">
+		<div class="hero-content">
+			<h1>Transform your property with expert detailing by Supreme Detailing</h1>
+			<p>Experience ultimate shine with professional detailing and pressure washing services. Supreme Detailing brings your property to life and ensures they look their best.</p>
+			<div class="hero-buttons">
+				<a href="#services" class="btn primary">View offered Services</a>
+				<a href="#contact" class="btn secondary">Book Now</a>
+			</div>
 		</div>
 	</div>
 
@@ -15,12 +18,73 @@
 
 <style>
 	#hero {
+		background-image: url(../../images/erik-mclean-u7B2HTbzVko-unsplash.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		min-height: 80vh;
 		padding: 4rem 1rem;
 		text-align: center;
 		background-color: var(--background-color);
 		color: var(--text-color);
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+
+	.hero-content {
+		text-align: center;
+		max-width: 900px;
+	}
+
+	.overlay {
+		background-color: rgba(0,0,0,0.8);
+		width: 100%;
+		height: 100%;
+		padding: 2rem 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0.5rem;
+	}
+
+	h1 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		font-size: 1rem;
+		margin-bottom: 2rem;
+		line-height: 1.5;
+	}
+
+	.hero-buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.btn {
+		padding: 0.75rem 1.5rem;
+		border: none;
+		text-decoration: none;
+		border-radius: 6px;
+		font-weiht: 600;
+		font-size: 1rem;
+		transition: background 0.3s ease;
 
 	}
+
+	.btn.primary {
+		background-color: var(--nav-bg);
+		color: whitesmoke;
+	}
+
+	.btn.secondary {
+		background-color: transparent;
+		color: white;
+		border: 2px solid var(--nav-bg);
+  }
 </style>

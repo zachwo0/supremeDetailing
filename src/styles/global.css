@@ -3,7 +3,7 @@
 	--secondary-color: #fff;
 	--background-color: #f9f9f9;
 	--text-color: #1a1a1a;
-	--nav-bg: #e24a4a
+	--nav-bg: #e24a4
 }
 
 @media (prefers-color-scheme: dark) {
