@@ -3,15 +3,17 @@
 	--secondary-color: #fff;
 	--background-color: #f9f9f9;
 	--text-color: #1a1a1a;
-	--nav-bg: #e24a4
+	--nav-bg: #e24a4;
+	--overlay: rgba(255, 255, 255, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background-color: #1a1a1a;
+		--background-color: #250902;
 		--text-color: #fff;
 		--primary-color: #ff9090;
-		--nav-bg: #d42020;
+		--nav-bg: #38040e;
+		--overlay: rgba(37, 9, 2, 0.7);
 	}
 }
 
