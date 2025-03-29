@@ -15,3 +15,83 @@
 		pointer-events: none;
 	}
 </style>
+
+<script is:inline>
+	const canvas = document.getElementById("condensationCanvas");
+	const ctx = canvas.getContext('2d');
+	let droplets = [];
+	const numOfDroplets = 200;
+
+class Droplet {
+    constructor(x, y, radius, velocityX, velocityY, opacity) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.velocityX = velocityX;
+        this.velocityY = velocityY;
+        this.opacity = opacity;
+    }
+
+    draw() {
+        ctx.beginPath();
+        const gradient = ctx.createRadialGradient(
+            this.x - this.radius / 3,
+            this.y - this.radius / 3,
+            0,
+            this.x,
+            this.y,
+            this.radius
+        );
+        gradient.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
+        gradient.addColorStop(1, `rgba(200, 200, 200, ${this.opacity * 0.8})`);
+        ctx.fillStyle = gradient;
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fill();
+    }
+
+    update() {
+        this.x += this.velocityX;
+        this.y += this.velocityY;
+
+        if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+            this.velocityX *= -1;
+        }
+        if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+            this.velocityY *= -1;
+        }
+    }
+}
+
+function init() {
+    for (let i = 0; i < numOfDroplets; i++) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const radius = Math.random() * 5 + 2;
+        const velocityX = (Math.random() - 0.5) * 0.2;
+        const velocityY = (Math.random() - 0.5) * 0.2;
+        const opacity = Math.random() * 0.5 + 0.2;
+        droplets.push(new Droplet(x, y, radius, velocityX, velocityY, opacity));
+    }
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    droplets.forEach((droplet) => {
+        droplet.update();
+        droplet.draw();
+    });
+}
+
+function resizeCanvas() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+}
+
+resizeCanvas();
+init();
+animate();
+
+window.addEventListener('resize', resizeCanvas);
+</script>
