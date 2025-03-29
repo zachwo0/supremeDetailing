@@ -2,10 +2,11 @@
 import logoDark from '../assets/logo_transparent.png';
 import logoLight from '../assets/dark_logo.png';
 import Navigation from './Navigation.astro';
-import { Picture } from 'astro:assets';
+import CondensationCanvas from './CondensationCanvas.astro';
 ---
 
 <header>
+	<CondensationCanvas />
 	<a href="/">
 		<picture>
 			<source srcset={logoDark.src} media="(prefers-color-scheme: dark)" />
@@ -26,10 +27,6 @@ import { Picture } from 'astro:assets';
 		color: var(--text-color);
 		gap: 1rem;
 		text-align: center;
-		background-image: url('/images/water_droplets.png');
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-blend-mode: overlay;
 	}
 
 	#logo {
