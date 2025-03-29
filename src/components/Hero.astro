@@ -31,6 +31,7 @@
 		align-items: center;
 		justify-content: center;
 		position: relative;
+		z-index: 0;
 	}
 
 	.hero-content {
@@ -39,7 +40,7 @@
 	}
 
 	.overlay {
-		background-color: var(--overlay);
+		background: var(--bg-gradient);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 		border: 1px solid rgba(255, 255, 255, 0.15);
@@ -52,6 +53,7 @@
 		align-items: center;
 		justify-content: center;
 		animation: fadeInUp 0.8s ease-out both;
+		z-index: 2;
 	}
 
 	h1 {

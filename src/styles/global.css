@@ -14,11 +14,8 @@
 		--background-color: #250902;
 		--text-color: #fff;
 		--nav-bg: #38040e;
-		--header-bg-start: rgba(37, 9, 2, 0.95);
-		--header-bg-mid: rgba(37, 9, 2, 0.7);
-		--header-bg-end: rgba(37, 9, 2, 0);
 		--primary-color: #ad2831;
-		--header-bg-gradient: linear-gradient(in lch, #640d14, #250902);
+		--bg-gradient: linear-gradient(to bottom, rgba(100, 13, 20, 0), rgba(37, 9, 2, 1));
 	}
 }
 
