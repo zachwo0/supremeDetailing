@@ -1,0 +1,8 @@
+<!-- public/effects/water-texture.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <filter id="waterDroplets">
+    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="3" result="turbulence"/>
+    <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
